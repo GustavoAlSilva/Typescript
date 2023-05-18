@@ -1,0 +1,28 @@
+// Exemplos de configurações
+
+{
+    "compilerOptions": {
+        "target": "ES6", // Compilar utilizando a versão ECMAScript 6
+        "watch": false, // Autocompilar após salvamento
+        "noEmitOnError": true, // Não compila quando há erros
+        "strictNullChecks": true, // Dá erro caso uma variável seja implicitamente tipada com "null" ou "undefined"
+        "noImplicitAny": true, // Dá erro caso uma variável seja implicitamente tipada com "any"
+        "outDir": "dist", // Diretório em que os arquivos compilados serão gerados,
+        "sourceMap": true // Gera um arquivo Javascript ".map", que nos permite debugar o código original (Typescript) no browser
+    },
+    "include": [
+        "src" // Apenas os arquivos da pasta "src" devem ser compilados
+    ]
+}
+
+/*
+    Essas configurações podem ser específicadas diretamente no terminal ao executar o projeto. Exemplo:
+
+        "tsc -t es6 -w --outDir dist src/*.ts"
+
+    Comparando:
+    
+        "target"            --> "-t"
+        "watch"             --> "-w"
+        "include: [ src ]"  --> "src/*.ts"
+*/
